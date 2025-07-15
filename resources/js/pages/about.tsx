@@ -1,15 +1,17 @@
 
-// resources/js/Pages/about.tsx
+import { type SharedData } from '@/types';
+import { Head, Link, usePage } from '@inertiajs/react';
+import Layout from '@/components/layout';
 
-import React from 'react';
+export default function About() {
+    const { auth } = usePage<SharedData>().props;
 
-const About = () => {
-    return (
-        <div>
-            <h1>About Us</h1>
-            <p>This is the about page.</p>
-        </div>
+   return (
+        <Layout title="About Us">
+            <h1>This is about page, welcome </h1>
+            {/* You can use auth or other props here if needed */}
+        </Layout>
     );
-};
+}
 
-export default About;
+    

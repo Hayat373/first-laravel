@@ -12,7 +12,8 @@ const Layout: React.FC<{ title: string; children: React.ReactNode }> = ({ title,
             </Head>
             <nav>
                 <a href='/'>Home </a>
-                <a href='/about'>About </a>
+          
+                <a href='/about'>About</a>
             </nav>
             <div>
                 {children}
