@@ -14,6 +14,9 @@ export interface NavGroup {
     title: string;
     items: NavItem[];
 }
+export type SharedData={
+    Username?:string;
+};
 
 export interface NavItem {
     title: string;
