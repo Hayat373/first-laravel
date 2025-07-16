@@ -2,13 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\JobController;
 
-Route::get('/', function () {
-    $Username="Hayat";
-    return Inertia::render('home', [
-        'Username'=> $Username,
-    ]);
-})->name('home');
+
+Route::get('/', [JobController::class, 'index'])->name('home');
+
+Route::get('/jobs/{id}', [JobController::class, 'show'])->name('jobs.show');
+
 
 Route::get('/about', function () {
      return Inertia::render('about');

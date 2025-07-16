@@ -1,15 +1,22 @@
-import { type SharedData } from '@/types';
-import { Head, Link, usePage } from '@inertiajs/react';
+
+
+import { usePage, Link } from '@inertiajs/react';
 import Layout from '@/components/layout';
+import { SharedData } from '@/types';
 
 export default function Home() {
-    const { Username } = usePage<SharedData>().props;
+    const { jobs } = usePage<SharedData>().props;
 
     return (
-       <Layout title="Home">
-            <h1>Hello, {Username} how are you 
-            </h1>
-            {/* You can use auth or other props here if needed */}
+        <Layout title="Job Listings">
+            <h1>Job Listings</h1>
+            <ul>
+                {jobs.map((job) => (
+                    <li key={job.id}>
+                        <Link href={`/jobs/${job.id}`}>{job.title}</Link>
+                    </li>
+                ))}
+            </ul>
         </Layout>
     );
 }

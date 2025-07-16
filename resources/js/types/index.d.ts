@@ -13,9 +13,16 @@ export interface BreadcrumbItem {
 export interface NavGroup {
     title: string;
     items: NavItem[];
-}
-export type SharedData={
-    Username?:string;
+};
+export type Job ={
+    id:nimber;
+    title:string;
+    description:string;
+};
+export type SharedData = {
+    jobs: Job[]; s
+    job?: Job;  
+  
 };
 
 export interface NavItem {

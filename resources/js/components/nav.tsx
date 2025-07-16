@@ -12,7 +12,7 @@ export default function Nav(){
                     url==='/'? 'underline text-green-500': 'text-forground'
                )}
                >
-                Home
+                job
                </Link>
 
                <Link
